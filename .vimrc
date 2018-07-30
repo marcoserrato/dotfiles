@@ -45,8 +45,8 @@ filetype plugin indent on    " required
 syntax on
 
 colorscheme default
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set smarttab
 set expandtab
 set number
@@ -82,3 +82,10 @@ map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_
 
 set backspace=indent,eol,start
+
+command Pjson execute "%!python -m json.tool"
+
+inoremap jj <ESC>
+inoremap kk <ESC>
+
+nnoremap <leader><space> :noh<cr>
